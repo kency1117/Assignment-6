@@ -1,0 +1,55 @@
+#task 1
+import sys
+
+for line in sys.stdin:
+    data = line.strip().split("\t")
+    if len(data) == 6:
+        date, time, store, item, cost, payment = data
+        print("{0}\t{1}".format(item, cost))
+
+
+
+# task 2
+from datetime import datetime, timedelta
+
+# Get the current date and time
+now = datetime.now()
+
+# Add 1 day
+new_time = now + timedelta(days=1)
+print("After adding 1 day:", new_time)
+
+# Subtract 60 seconds
+new_time = new_time - timedelta(seconds=60)
+print("After subtracting 60 seconds:", new_time)
+
+# Add 2 years
+new_time = new_time + timedelta(days=2*365)  # Approximating 2 years as 365 days each
+print("After adding 2 years:", new_time)
+
+#task 3
+from datetime import timedelta
+
+# Create a timedelta object
+time_delta = timedelta(days=100, hours=10, minutes=13)
+
+# Output the days, seconds, and microseconds
+print("Days:", time_delta.days)
+print("Seconds:", time_delta.seconds)
+print("Microseconds:", time_delta.microseconds)
+
+
+#task 4
+from datetime import datetime
+
+def add_feet_inches(feet, inches):
+    # This is a placeholder function; actual implementation will depend on what needs to be done with feet and inches.
+    # Here we are just printing the inputs along with the current datetime.
+    now = datetime.now()
+    print("Current datetime:", now)
+    print("Feet:", feet)
+    print("Inches:", inches)
+
+# Example usage
+add_feet_inches(5, 9)
+
